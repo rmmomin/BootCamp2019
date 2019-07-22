@@ -1,0 +1,1362 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{lscape}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{array}
+\hypersetup{colorlinks=true,citecolor=blue, linkcolor=black}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "ae" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Problem Set: Introduction to Measure Theory
+\end_layout
+
+\begin_layout Author
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%EndAName
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+OSE Lab 2019
+\end_layout
+
+\begin_layout Date
+July 2019
+\end_layout
+
+\begin_layout Section
+Measure Spaces
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{\mathcal{G}_{1}=\{A:A\subset\mathbb{R},A\text{ open }\}}$
+\end_inset
+
+ is not closed under complements.
+ For example, 
+\begin_inset Formula $\left(0,+\infty\right)$
+\end_inset
+
+ is an open set in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ so it is included in 
+\begin_inset Formula $\mathcal{G}_{1}$
+\end_inset
+
+, but its complement 
+\begin_inset Formula $\left(-\infty,0\right]$
+\end_inset
+
+ is not open.
+ Thus 
+\begin_inset Formula $\mathcal{G}_{1}$
+\end_inset
+
+ is not an algebra.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ is not included in 
+\begin_inset Formula $\mathcal{G}_{2}$
+\end_inset
+
+, then it is not an algebra by definition.
+ If 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ is included in 
+\begin_inset Formula $\ensuremath{\mathcal{G}_{2}=\{A:A\text{ is a finite union of intervals of the form }(a,b],(-\infty,b],\text{ and }(a,\infty)\}}$
+\end_inset
+
+, then it is an algebra as it is closed under complements (the complement
+ would be a finite intersection of 
+\begin_inset Formula $(-\infty,a]\cup(b,\infty),(b,\infty)\text{ and }(-\infty,a]$
+\end_inset
+
+, which is either empty or could be written as a finite union of the above
+ forms) and closed under finite unions (a finite union of the sets that
+ are finite unions of
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ intervals of the form
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $(\mathrm{a},\mathrm{b}],(-\infty,\mathrm{b}],\text{ and }(\mathrm{a},\infty)$
+\end_inset
+
+ is still a finite union of intervals of these forms).
+ It is not a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra.
+ For example, the countable union
+\begin_inset Formula 
+\[
+\cup_{n=2}^{\infty}\left(0,\frac{n-1}{n}\right]=\left(0,1\right)
+\]
+
+\end_inset
+
+is not in 
+\begin_inset Formula $\mathcal{G}_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{\mathcal{G}_{3}=\{A:A\text{ is a countable union of }(\mathrm{a},\mathrm{b}],(-\infty,\mathrm{b}],\text{ and }(\mathrm{a},\infty)\}}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra if we include 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ in it.
+ The proof follows similarly as above but now 
+\begin_inset Quotes eld
+\end_inset
+
+finite
+\begin_inset Quotes erd
+\end_inset
+
+ applies more generally to 
+\begin_inset Quotes eld
+\end_inset
+
+countable
+\begin_inset Quotes erd
+\end_inset
+
+ too.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $\ensuremath{\mathcal{A}}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra, then 
+\begin_inset Formula $\emptyset\in\mathcal{A}$
+\end_inset
+
+.
+ The complement of 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $X$
+\end_inset
+
+ must also be in 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\ensuremath{\{0,X\}\subset\mathcal{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Note that if 
+\begin_inset Formula $S\subset X$
+\end_inset
+
+, then 
+\begin_inset Formula $S^{c}=X\setminus S\subset X$
+\end_inset
+
+.
+ Also note that finite unions of subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+ is still a subset of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra generated from some subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathcal{A\subset}\mathcal{P}(X)$
+\end_inset
+
+ as 
+\begin_inset Formula $\ensuremath{\mathcal{P}(X)=\{A:A\subset X\}}$
+\end_inset
+
+ contains all the subsets of 
+\begin_inset Formula $X$
+\end_inset
+
+ by definition.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Since 
+\begin_inset Formula $\emptyset\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$
+\end_inset
+
+, we thus have 
+\begin_inset Formula $\emptyset\in\ensuremath{\cap_{\alpha}\mathcal{S}_{\alpha}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Pick any 
+\begin_inset Formula $X\in\ensuremath{\cap_{\alpha}\mathcal{S}_{\alpha}}$
+\end_inset
+
+ and hence 
+\begin_inset Formula $X\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$
+\end_inset
+
+.
+ Since a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra is closed under complements, we have 
+\begin_inset Formula $X^{c}\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $X^{c}\in\cap_{\alpha}\mathcal{S}_{\alpha}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Pick countable sets 
+\begin_inset Formula $X_{1},X_{2},\ldots\in\ensuremath{\cap_{\alpha}\mathcal{S}_{\alpha}}$
+\end_inset
+
+, and hence 
+\begin_inset Formula $X_{i}\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha,\forall i$
+\end_inset
+
+.
+ Since a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra is closed under countable unions, thus 
+\begin_inset Formula $\cup_{i}X_{i}\in\ensuremath{\mathcal{S}_{\alpha}},\forall\alpha$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\cup_{i}X_{i}\in\cap_{\alpha}\mathcal{S}_{\alpha}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+The above propositions mean that 
+\begin_inset Formula $\cap_{\alpha}\mathcal{S}_{\alpha}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $C=B\setminus A=B\cap A^{c}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is a nonnegative measure and hence 
+\begin_inset Formula $\mu\left(C\right)\geq0$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $B=A\cup C$
+\end_inset
+
+ and 
+\begin_inset Formula $A\cap C=\emptyset$
+\end_inset
+
+.
+ Therefore
+\begin_inset Formula 
+\[
+\mu\left(B\right)=\mu\left(A\right)+\mu\left(C\right)\geq\mu\left(A\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $B_{n}=\cup_{i=1}^{n}A_{i}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $B_{1}\subset B_{2}\subset B_{3}\subset\cdots$
+\end_inset
+
+.
+ By Theorem 1.25 (i), we have 
+\begin_inset Formula $\ensuremath{\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)}=\mu\left(\cup_{i=1}^{\infty}B_{i}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note that 
+\begin_inset Formula $\cup_{i=1}^{\infty}B_{i}=\cup_{i=1}^{\infty}A_{i}$
+\end_inset
+
+, hence 
+\begin_inset Formula $\mu\left(\cup_{i=1}^{\infty}B_{i}\right)=\mu\left(\cup_{i=1}^{\infty}A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Note that 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)=\lim_{n\rightarrow\infty}\mu\left(\cup_{i=1}^{n}A_{i}\right)\leq\lim_{n\rightarrow\infty}\sum_{i=1}^{n}\mu\left(A_{i}\right)=\sum_{i=1}^{\infty}\mu\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Therefore, 
+\begin_inset Formula $\mu\left(\cup_{i=1}^{\infty}A_{i}\right)\leq\sum_{i=1}^{\infty}\mu\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda\left(\emptyset\right)=\mu\left(\emptyset\cap B\right)=\mu\left(\emptyset\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+For any 
+\begin_inset Formula $\ensuremath{\left\{ A_{i}\right\} _{i=1}^{\infty}\subset\mathcal{S}\mathrm{s.t.}A_{i}\cap A_{j}=\emptyset\forall i\neq j}$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+\lambda\left(\cup_{i=1}^{\infty}A_{i}\right) & =\mu\left(\left(\cup_{i=1}^{\infty}A_{i}\right)\cap B\right)=\mu\left(\cup_{i=1}^{\infty}\left(A_{i}\cap B\right)\right)\\
+ & =\sum_{i=1}^{\infty}\mu\left(A_{i}\cap B\right)=\sum_{i=1}^{\infty}\lambda\left(A_{i}\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $B_{n}=A_{1}\cap A_{n}^{c}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula 
+\[
+\cup_{i=1}^{\infty}B_{i}=\cup_{i=1}^{\infty}\left(A_{1}\cap A_{i}^{c}\right)=A_{1}\cap\left(\cup_{i=1}^{\infty}A_{i}^{c}\right)=A_{1}\setminus\left(\cap_{i=1}^{\infty}A_{i}\right),
+\]
+
+\end_inset
+
+we have 
+\begin_inset Formula $\mu\left(\cup_{i=1}^{\infty}B_{i}\right)=\mu\left(A_{1}\right)-\mu\left(\cap_{i=1}^{\infty}A_{i}\right)$
+\end_inset
+
+.
+ In addition, 
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)=\lim_{n\rightarrow\infty}\mu\left(A_{1}\cap A_{n}^{c}\right)=\lim_{n\rightarrow\infty}\left(\mu\left(A_{1}\right)-\mu\left(A_{n}\right)\right)=\mu\left(A_{1}\right)-\lim_{n\rightarrow\infty}\mu\left(A_{n}\right).
+\]
+
+\end_inset
+
+Note that 
+\begin_inset Formula $\ensuremath{B_{1}\subset B_{2}\subset B_{3}\subset\cdots}$
+\end_inset
+
+.
+ By Theorem 1.25 (i) we have
+\begin_inset Formula 
+\[
+\ensuremath{\lim_{n\rightarrow\infty}\mu\left(B_{n}\right)=\mu\left(\cup_{i=1}^{\infty}B_{i}\right)}.
+\]
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\[
+\mu\left(A_{1}\right)-\lim_{n\rightarrow\infty}\mu\left(A_{n}\right)=\mu\left(A_{1}\right)-\mu\left(\cap_{i=1}^{\infty}A_{i}\right)\Longrightarrow\text{\lim_{n\rightarrow\infty}\mu\left(A_{n}\right)=\mu\left(\cap_{i=1}^{\infty}A_{i}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Construction of Lebesgue Measure
+\end_layout
+
+\begin_layout Exercise
+Since 
+\begin_inset Formula $\mu^{*}$
+\end_inset
+
+ is an outer measure, it is countably subadditive.
+ Note that 
+\begin_inset Formula $\left(\ensuremath{B\cap E}\right)\cup\left(\ensuremath{B\cap E}^{c}\right)=B$
+\end_inset
+
+, thus
+\begin_inset Formula 
+\[
+\mu^{*}\left(B\right)\leq\mu^{*}\left(B\cap E\right)+\mu^{*}\left(\ensuremath{B\cap E}^{c}\right).
+\]
+
+\end_inset
+
+If in addition 
+\begin_inset Formula $\mu^{*}\left(B\right)\geq\mu^{*}\left(B\cap E\right)+\mu^{*}\left(\ensuremath{B\cap E}^{c}\right)$
+\end_inset
+
+, it must be that 
+\begin_inset Formula $\mu^{*}\left(B\right)=\mu^{*}\left(B\cap E\right)+\mu^{*}\left(\ensuremath{B\cap E}^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Denote 
+\begin_inset Formula $\ensuremath{\mathcal{O}}$
+\end_inset
+
+ the collection of open sets of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ By definition, the Borel 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is the 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra generated by 
+\begin_inset Formula $\ensuremath{\mathcal{O}}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula $\ensuremath{\mathcal{B}(\mathbb{R})}=\ensuremath{\sigma(\mathcal{O})}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\nu$
+\end_inset
+
+ be a premeasure on 
+\begin_inset Formula $\ensuremath{\mathbb{R}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu^{*}$
+\end_inset
+
+ the outer measure generated by 
+\begin_inset Formula $\nu$
+\end_inset
+
+, and 
+\begin_inset Formula $\ensuremath{\mathcal{M}}$
+\end_inset
+
+ the 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra from the Caratheodory construction.
+ By Theorem 2.12, we have 
+\begin_inset Formula $\ensuremath{\mathcal{B}(\mathbb{R})}=\ensuremath{\sigma(\mathcal{O})}\subset\ensuremath{\mathcal{M}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Measurable Functions
+\end_layout
+
+\begin_layout Exercise
+Consider a countable set 
+\begin_inset Formula $\left\{ x_{n}\right\} _{n=1}^{\infty}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\left\{ x_{n}\right\} \subset\left(x_{n}-\frac{\varepsilon}{2^{n+1}},x_{n}+\frac{\varepsilon}{2^{n+1}}\right],\forall\varepsilon>0$
+\end_inset
+
+.
+ Note that
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\left[\left(x_{n}+\frac{\varepsilon}{2^{n+1}}\right)-\left(x_{n}-\frac{\varepsilon}{2^{n+1}}\right)\right]=\sum_{n=1}^{\infty}\frac{\varepsilon}{2^{n}}=\varepsilon.
+\]
+
+\end_inset
+
+By definition of Lebesgue measure,
+\begin_inset Formula 
+\begin{align*}
+\lambda\left(\left\{ x_{n}\right\} _{n=1}^{\infty}\right) & =\inf\left\{ \ensuremath{\sum_{n=1}^{\infty}\left(b_{n}-a_{n}\right):\left\{ x_{n}\right\} _{n=1}^{\infty}\subset\bigcup_{i=1}^{\infty}\left(a_{i},b_{i}\right]}\right\} \\
+ & \leq\inf\left\{ \ensuremath{\sum_{n=1}^{\infty}\left[\left(x_{n}+\frac{\varepsilon}{2^{n+1}}\right)-\left(x_{n}-\frac{\varepsilon}{2^{n+1}}\right)\right]:\left\{ x_{n}\right\} _{n=1}^{\infty}\subset\bigcup_{i=1}^{\infty}\left(x_{n}-\frac{\varepsilon}{2^{n+1}},x_{n}+\frac{\varepsilon}{2^{n+1}}\right]},\varepsilon>0\right\} \\
+ & =\inf\left\{ \ensuremath{\varepsilon:}\varepsilon>0\right\} =0.
+\end{align*}
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $\lambda\left(\left\{ x_{n}\right\} _{n=1}^{\infty}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Since 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra, it is closed under complements and countable unions.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\forall a,\ensuremath{\{x\in X:f(x)\geq a\}}\in\mathcal{M}$
+\end_inset
+
+, then its complement 
+\begin_inset Formula $\ensuremath{\{x\in X:f(x)<a\}}\in\mathcal{M}$
+\end_inset
+
+ too.
+ So (*) can be replaced by 
+\begin_inset Formula $\{x\in X:f(x)\geq a\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\forall a,\{x\in X:f(x)>a\}\in\mathcal{M}$
+\end_inset
+
+, then a countable union
+\begin_inset Formula 
+\[
+\cup_{n=1}^{\infty}\{x\in X:f(x)>a+\frac{1}{n}\}=\{x\in X:f(x)\geq a\}
+\]
+
+\end_inset
+
+is also in 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+.
+ By (1), (*) can by replaced by 
+\begin_inset Formula $\{x\in X:f(x)>a\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\forall a,\ensuremath{\{x\in X:f(x)\leq a\}}\in\mathcal{M}$
+\end_inset
+
+, then its complement 
+\begin_inset Formula $\ensuremath{\{x\in X:f(x)>a\}}\in\mathcal{M}$
+\end_inset
+
+ too.
+ By (2), (*) can by replaced by 
+\begin_inset Formula $\{x\in X:f(x)\leq a\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $F\left(f,g\right)=f+g$
+\end_inset
+
+ which is continuous.
+ By (4), 
+\begin_inset Formula $f+g$
+\end_inset
+
+ is measurable.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $F\left(f,g\right)=f\cdot g$
+\end_inset
+
+ which is continuous.
+ By (4), 
+\begin_inset Formula $f\cdot g$
+\end_inset
+
+ is measurable.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $f_{n}=f$
+\end_inset
+
+ for 
+\begin_inset Formula $n$
+\end_inset
+
+ odd and 
+\begin_inset Formula $f_{n}=g$
+\end_inset
+
+ for 
+\begin_inset Formula $n$
+\end_inset
+
+ even.
+ Thus 
+\begin_inset Formula $\sup_{n\in\mathbb{N}}f_{n}(x)=\max\left(f,g\right)$
+\end_inset
+
+.
+ By (2), 
+\begin_inset Formula $\max\left(f,g\right)$
+\end_inset
+
+ is measurable.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $f_{n}=f$
+\end_inset
+
+ for 
+\begin_inset Formula $n$
+\end_inset
+
+ odd and 
+\begin_inset Formula $f_{n}=g$
+\end_inset
+
+ for 
+\begin_inset Formula $n$
+\end_inset
+
+ even.
+ Thus 
+\begin_inset Formula $\inf_{n\in\mathbb{N}}f_{n}(x)=\min\left(f,g\right)$
+\end_inset
+
+.
+ By (2), 
+\begin_inset Formula $\min\left(f,g\right)$
+\end_inset
+
+ is measurable.
+\end_layout
+
+\begin_layout Itemize
+First, 
+\begin_inset Formula $g\left(x\right)=-1$
+\end_inset
+
+ is measurable.
+ Thus 
+\begin_inset Formula $-f=f\cdot g$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+is measurable.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Next note that 
+\begin_inset Formula $\left|f\right|=\max\left(f,-f\right)$
+\end_inset
+
+, so 
+\begin_inset Formula $\left|f\right|$
+\end_inset
+
+ is also measurable.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+We construct a partition as in the proof.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ is bounded, 
+\begin_inset Formula $\exists M$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $f\left(x\right)<M,\forall x$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n>M$
+\end_inset
+
+, 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, there exists some 
+\begin_inset Formula $i$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x\in E_{i}^{n}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $s_{n}(x)=\frac{i-1}{2^{n}}$
+\end_inset
+
+ for this 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|f(x)-s_{n}(x)\right|<\frac{1}{2^{n}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+, there exists 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\frac{1}{2^{N}}<\epsilon$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $\forall n>\max\left(N,M\right),$
+\end_inset
+
+we have
+\begin_inset Formula 
+\[
+\left|f(x)-s_{n}(x)\right|<\frac{1}{2^{n}}<\varepsilon,
+\]
+
+\end_inset
+
+hence the convergence in is uniform.
+\end_layout
+
+\begin_layout Section
+Lebesgue Integration
+\end_layout
+
+\begin_layout Exercise
+Since 
+\begin_inset Formula $f^{+}=\max\{f(x),0\}\in\left[0,M\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\mu\left(E\right)<\infty$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+0\leq\int_{E}f^{+}d\mu\leq M\mu\left(E\right)<\infty.
+\]
+
+\end_inset
+
+Similarly, 
+\begin_inset Formula $f^{-}=\max\{-f(x),0\}\in\left[0,M\right)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+0\leq\int_{E}f^{-}d\mu\leq M\mu\left(E\right)<\infty.
+\]
+
+\end_inset
+
+Both 
+\begin_inset Formula $\int_{E}f^{+}d\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\int_{E}f^{-}d\mu$
+\end_inset
+
+ are finite, so 
+\begin_inset Formula $f\in\mathscr{L}^{1}(\mu,E)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Suppose there exists 
+\begin_inset Formula $X\subset E$
+\end_inset
+
+ with 
+\begin_inset Formula $\mu\left(X\right)>0$
+\end_inset
+
+, and 
+\begin_inset Formula $f\left(x\right)=\infty,\forall x\in X$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+\int_{E}\left|f\right|d\mu\geq\int_{X}\left|f\right|d\mu\geq\int_{X}fd\mu=\infty,
+\]
+
+\end_inset
+
+contradictory to 
+\begin_inset Formula $f$
+\end_inset
+
+ being integrable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $f\leq g$
+\end_inset
+
+ implies that 
+\begin_inset Formula $\{s:0\leq s\leq f,s\text{ simple, measurable \}}\subset\{s:0\leq s\leq g,s\text{ simple, measurable }\}$
+\end_inset
+
+, and thus 
+\begin_inset Formula $\sup\left\{ \int_{E}sd\mu:0\leq s\leq f,s\text{ simple, measurable }\right\} \leq\sup\left\{ \int_{E}sd\mu:0\leq s\leq g,s\text{ simple, measurable }\right\} $
+\end_inset
+
+.
+ By definition this is 
+\begin_inset Formula $\int_{E}fd\mu\leq\int_{E}gd\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Consider any 
+\begin_inset Formula $s\left(x\right)=\sum_{i=1}^{N}c_{i}\chi_{E}$
+\end_inset
+
+ simple, measurable.
+ 
+\begin_inset Formula $A\subset E$
+\end_inset
+
+ implies that 
+\begin_inset Formula $A\cap E_{i}\subset E\cap E_{i},\forall i$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\mu\left(A\cap E_{i}\right)\leq\mu\left(E\cap E_{i}\right)$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula 
+\[
+\int_{A}sd\mu=\sum_{i=1}^{N}c_{i}\mu\left(A\cap E_{i}\right)\leq\sum_{i=1}^{N}c_{i}\mu\left(E\cap E_{i}\right)=\int_{E}sd\mu.
+\]
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\begin{align*}
+\int_{A}f^{+}d\mu & =\sup\left\{ \int_{A}sd\mu:0\leq s\leq f^{+},\text{ s simple, measurable }\right\} \\
+ & \leq\sup\left\{ \int_{E}sd\mu:0\leq s\leq f^{+},\text{ s simple, measurable }\right\} \\
+ & =\int_{E}f^{+}d\mu<\infty,
+\end{align*}
+
+\end_inset
+
+and similarly 
+\begin_inset Formula $\int_{A}f^{-}d\mu<\infty$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $f\in\mathscr{L}^{1}(\mu,A)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $X_{1}=A\cap B$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}=A-B$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $X_{1}\cap X_{2}=\emptyset$
+\end_inset
+
+ and 
+\begin_inset Formula $A=X_{1}\cup X_{2}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $B\subset A$
+\end_inset
+
+, we have 
+\begin_inset Formula $A\cap B=B$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula 
+\[
+\int_{A}fd\mu=\int_{B}fd\mu+\int_{A-B}fd\mu.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\mu\left(A-B\right)=0$
+\end_inset
+
+, by Proposition 4.6 we have 
+\begin_inset Formula $\int_{A-B}fd\mu=0$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\int_{A}fd\mu=\int_{B}fd\mu$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
